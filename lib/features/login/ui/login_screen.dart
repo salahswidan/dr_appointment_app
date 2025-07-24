@@ -1,13 +1,87 @@
+import 'package:dr_appointment_app/core/theming/styles.dart';
+import 'package:dr_appointment_app/core/widgets/app_text_button.dart';
+import 'package:dr_appointment_app/core/widgets/app_text_form_field.dart';
+import 'package:dr_appointment_app/features/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginScreen extends StatelessWidget {
+import 'widgets/already_have_account_text.dart';
+
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final formKey = GlobalKey<FormState>();
+  bool isObscureText = true;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login Screen')),
-      body: Center(child: Text('Login Screen')),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 16.0),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Welcome Back', style: TextStyles.font24BlueBold),
+                SizedBox(height: 8.h),
+                Text(
+                  'We\'re excited to have you back, can\'t wait to see you\'ve been up to since you last logged in ',
+                  style: TextStyles.font14GrayRegular,
+                ),
+                SizedBox(height: 36.h),
+                Form(
+                  key: formKey,
+                  child: Column(
+                    children: [
+                      const AppTextFormField(hintText: 'Email'),
+                      SizedBox(height: 18.h),
+                      AppTextFormField(
+                        hintText: 'Password',
+                        isObscureText: isObscureText,
+                        suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isObscureText = !isObscureText;
+                            });
+                          },
+                          child: Icon(
+                            isObscureText
+                                ? Icons.visibility_off
+                                : Icons.visibility,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 24.h),
+                      Align(
+                        alignment: AlignmentDirectional.centerEnd,
+                        child: Text(
+                          "Forgot Password?",
+                          style: TextStyles.font13BlueRegular,
+                        ),
+                      ),
+                      SizedBox(height: 40.h),
+                      AppTextButton(
+                        buttonText: 'Login',
+                        textStyle: TextStyles.font16WhiteSemiBold,
+                        onPressed: () {},
+                      ),
+                      SizedBox(height: 16.h),
+                      const TermsAndConditionsText(),
+                      SizedBox(height: 60.h),
+                      const AlreadyHaveAccountText(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
