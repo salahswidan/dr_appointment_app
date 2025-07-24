@@ -6,6 +6,7 @@ import '../../features/on_boarding/on_boarding_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
+    final arguments = settings.arguments;
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(

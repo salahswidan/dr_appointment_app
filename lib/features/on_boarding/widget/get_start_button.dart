@@ -1,7 +1,9 @@
+import 'package:dr_appointment_app/core/helpers/extensions.dart';
 import 'package:dr_appointment_app/core/theming/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/routing/routes.dart';
 import '../../../core/theming/styles.dart';
 
 class GetStartedButton extends StatelessWidget {
@@ -11,7 +13,7 @@ class GetStartedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        // Handle button press
+        context.pushNamed(Routes.loginScreen);
       },
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(ColorsManager.mainBlue),
