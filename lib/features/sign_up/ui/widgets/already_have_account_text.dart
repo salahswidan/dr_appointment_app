@@ -1,6 +1,6 @@
 import 'package:dr_appointment_app/core/helpers/extensions.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/styles.dart';
@@ -19,13 +19,12 @@ class AlreadyHaveAccountText extends StatelessWidget {
             style: TextStyles.font13DarkBlueRegular,
           ),
           TextSpan(
-            text: ' Sign Up',
+            text: ' Login',
             style: TextStyles.font13BlueSemiBold,
-            recognizer:
-                TapGestureRecognizer()
-                  ..onTap = () {
-                    context.pushReplacementNamed(Routes.loginScreen);
-                  },
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                context.pushReplacementNamed(Routes.loginScreen);
+              },
           ),
         ],
       ),
