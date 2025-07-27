@@ -8,6 +8,7 @@ import 'core/routing/app_router.dart';
 void main()async {
   setupGetIt();
   await ScreenUtil.ensureScreenSize();
+  
   runApp( DocApp(
     appRouter: AppRouter(),
   ));
