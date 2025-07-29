@@ -1,9 +1,7 @@
-import 'package:dr_appointment_app/features/home/data/models/specializations_response_model.dart';
-import 'package:dr_appointment_app/features/home/ui/widgets/doctors_list_view_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/theming/styles.dart';
+import '../../../data/models/specializations_response_model.dart';
+import 'doctors_list_view_item.dart';
 
 class DoctorsListView extends StatelessWidget {
   final List<Doctors?>? doctorsList;

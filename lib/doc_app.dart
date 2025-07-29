@@ -12,7 +12,7 @@ class DocApp extends StatelessWidget {
   const DocApp({super.key, required this.appRouter});
 
   @override
-  Widget build(BuildContext context) { 
+  Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
@@ -23,8 +23,8 @@ class DocApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        //! here
-        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
+        //! here isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
+        initialRoute: Routes.homeScreen,
         onGenerateRoute: appRouter.generateRoute,
       ),
     );
