@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:dr_appointment_app/features/home/data/apis/home_api_service.dart';
+import 'package:dr_appointment_app/features/home/data/repos/home_repo.dart';
 
 import 'package:get_it/get_it.dart';
 
@@ -23,5 +25,10 @@ Future<void> setupGetIt() async {
   // sign up
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
   getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
+
+  // home
+  getIt.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
+
 
 }
