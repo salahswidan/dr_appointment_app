@@ -10,12 +10,13 @@ class LoginRepo {
   LoginRepo(this._apiService);
 
   Future<ApiResult<LoginResponse>> login(
-      LoginRequestBody loginRequestBody) async {
+    LoginRequestBody loginRequestBody,
+  ) async {
     try {
       final response = await _apiService.login(loginRequestBody);
       return ApiResult.success(response);
     } catch (errro) {
-      return ApiResult.failure(ErrorHandler.handle(errro));
+      return ApiResult.failure(ApiErrorHandler.handle(errro));
     }
   }
 }
