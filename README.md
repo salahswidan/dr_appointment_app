@@ -8,6 +8,9 @@ The project demonstrates best practices in Flutter development, including modula
 <img width="1500" <img width="1500" height="3248" alt="splash" src="https://github.com/user-attachments/assets/27cf8572-6c8c-4945-9e08-67181043de15" />
 <img width="1440" height="3040" alt="on_boarding" src="https://github.com/user-attachments/assets/abbcfc85-04af-4858-a30a-7f40e1312d42" />
 <img width="1440" height="3040" alt="login" src="https://github.com/user-attachments/assets/daf2fdb0-2a07-4bbb-a188-5f936cd5c4f5" />
+<img width="1344" height="2992" alt="Screenshot_1754337536" src="https://github.com/user-attachments/assets/a75b7647-524f-4419-b986-f2f0eb5b5746" />
+<img width="1344" height="2992" alt="Screenshot_1754337428" src="https://github.com/user-attachments/assets/04a5ae34-ce5b-4f4f-9500-b4bf0285776c" />
+
 
 
 ## 📱 Features
